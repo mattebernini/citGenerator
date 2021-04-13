@@ -1,6 +1,13 @@
 espeak --> voce
 
 pip3 install -r requisiti.txt
+sudo apt-get install python3-tk
+
+pyinstaller citGenerator.py --i logo.ico --onefile -n citGenerator
+
+$ cronotab -e
+*/1 * * * * /cartella_del_progetto/citGenerator.sh
+$ cronotab -l
 
 
 FONTI:

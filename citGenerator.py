@@ -3,6 +3,7 @@ import time
 import bs4 
 import requests
 import random
+import tkinter as tk  
 
 ora_attuale = time.strftime('%H', time.localtime())
 min_attuale = time.strftime('%M', time.localtime())
@@ -25,9 +26,18 @@ num = random.randint(1, 16)
 ancora = tutte_cit[num].find_all("a")
 testo = ancora[0].get("title")
 testo = testo.replace("Frase di dettaglio", "")
+testo = testo.replace("Ellipsis", "")
 testo = testo.replace("“ —", "“\n\n —")
+testo = testo.replace(",", ",\n")
 
-# GUI da aggiungere
-print(testo)
-input(...)
+# GUI 
+window = tk.Tk()    #creo una finestra
+window.geometry("600x300")
+window.title("citGenerator")
+w = tk.Label(window, text=testo)
+w.pack()
+w.place(relx = 0, rely = 0.3)
+
+window.mainloop()
+
 
