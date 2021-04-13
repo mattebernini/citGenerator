@@ -29,7 +29,5 @@ testo = testo.replace("“ —", "“\n\n —")
 
 # GUI da aggiungere
 print(testo)
-
-
-
+input(...)
 
