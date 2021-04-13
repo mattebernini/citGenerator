@@ -26,6 +26,8 @@ ancora = tutte_cit[num].find_all("a")
 testo = ancora[0].get("title")
 testo = testo.replace("Frase di dettaglio", "")
 testo = testo.replace("“ —", "“\n\n —")
+
+# GUI da aggiungere
 print(testo)
 
 
