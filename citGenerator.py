@@ -1,18 +1,11 @@
-import pyttsx3
 import os
-from dotenv import load_dotenv
 import time
 import bs4 
 import requests
 import random
 
-# gestione timer (woek in progress)
 ora_attuale = time.strftime('%H', time.localtime())
 min_attuale = time.strftime('%M', time.localtime())
-
-load_dotenv()
-ora_target = os.getenv("ORA")
-min_target = os.getenv("MIN")
 
 if int(min_attuale)%2 == 0:
     link = "https://le-citazioni.it/frasi/"
@@ -35,11 +28,6 @@ testo = testo.replace("Frase di dettaglio", "")
 testo = testo.replace("“ —", "“\n\n —")
 print(testo)
 
-# speaker (ok)
-speaker = pyttsx3.init()
-voices = speaker.getProperty('voices')
-speaker.setProperty("voice", "italian")
-speaker.say(testo)
-speaker.runAndWait()
+
 
 
