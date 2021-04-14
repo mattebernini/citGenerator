@@ -1,5 +1,3 @@
-espeak --> voce
-
 pip3 install -r requisiti.txt
 sudo apt-get install python3-tk
 
