@@ -5,7 +5,7 @@ pyinstaller citGenerator.py --i logo.ico --onefile -n citGenerator
 
 $ cronotab -e
 */2 * * * * /percorso_cartella/citGenerator/citGenerator.sh > /dev/null 2>&1
-$ cronotab -l
+$ cronotab -l 
 
 
 FONTI:
